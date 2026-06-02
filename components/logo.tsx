@@ -1,15 +1,19 @@
-import { Shield } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo() {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <div className="relative">
-        <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
-          <Shield className="w-5 h-5 text-primary" />
-        </div>
-        <div className="absolute inset-0 rounded-full glow-purple opacity-50" />
+    <Link href="/" className="inline-block">
+      <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={64}
+          height={64}
+          className="w-full h-full object-cover"
+          priority
+        />
       </div>
-      <span className="text-xl font-bold tracking-tight text-foreground">Nelkai</span>
-    </div>
+    </Link>
   )
 }

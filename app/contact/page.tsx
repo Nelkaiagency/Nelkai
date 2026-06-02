@@ -8,11 +8,19 @@ import { Calendar, Send } from "lucide-react"
 import { useState } from "react"
 
 const bottleneckOptions = [
-  "Customer Booking",
-  "Invoice Tracking",
-  "Email Sorting",
-  "Lead Management",
+  "ERP & Asset Management Integration",
+  "Supply Chain Visibility",
+  "Compliance & Regulatory Audit",
+  "Data Pipeline Orchestration",
+  "Operational Cost Control",
   "Other",
+]
+
+const budgetOptions = [
+  { value: "", label: "Select budget range...", disabled: true },
+  { value: "SME Frameworks (€300 - €800 / mo)", label: "SME Frameworks (€300 - €800 / mo)" },
+  { value: "Custom Enterprise Architecture (€1,000 - €3,000 / mo)", label: "Custom Enterprise Architecture (€1,000 - €3,000 / mo)" },
+  { value: "Strategic Transformation (€3,000+ / mo)", label: "Strategic Transformation (€3,000+ / mo)" },
 ]
 
 export default function ContactPage() {
@@ -45,7 +53,7 @@ export default function ContactPage() {
 }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-[#0A0A0F] text-white">
       <Navbar />
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,21 +86,32 @@ export default function ContactPage() {
                 with an automation architect.
               </p>
 
-              {/* Calendar Placeholder */}
-              <div className="rounded-xl border border-border/30 bg-background/50 p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Calendar className="w-8 h-8 text-primary" />
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Calendar integration ready for Calendly or TidyCal embed
+              <div className="rounded-3xl border border-gray-800 bg-[#0A0A0F] p-6">
+              <div className="mb-6">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Lock a dedicated audit slot with our enterprise automation architect, then receive a tailored discovery brief for your organization.
                 </p>
-                <a href="https://calendly.com/nelkai-info/30min" target="_blank" rel="noopener noreferrer">
-  <Button variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10">
-    Book a Discovery Call
-  </Button>
-</a>
               </div>
+
+              <div className="overflow-hidden rounded-3xl border border-gray-900 bg-[#0A0A0F] shadow-[0_20px_80px_rgba(124,58,237,0.12)]">
+                <iframe
+                  src="https://calendly.com/nelkai-info/30min?backgroundColor=0a0a0f&textColor=ffffff&primaryColor=7c3aed"
+                  title="Nelkai Schedule Audit"
+                  className="w-full h-[420px]"
+                  frameBorder="0"
+                  scrolling="no"
+                />
+              </div>
+
+              <p className="mt-4 text-xs leading-relaxed text-gray-500">
+                If the embed does not render, <a href="https://calendly.com/nelkai-info/30min?backgroundColor=0a0a0f&textColor=ffffff&primaryColor=7c3aed" target="_blank" rel="noreferrer" className="text-primary">open the booking experience</a>.
+              </p>
             </div>
+
+            <p className="mt-6 text-xs leading-relaxed text-gray-500">
+              🔒 Confidentiality Guaranteed: All project metrics discussed during structural evaluations are protected under standard corporate NDA parameters.
+            </p>
+          </div>
 
             {/* Right Column - Intake Form */}
             <div className="rounded-2xl border border-border/50 bg-card/30 p-8 lg:p-10">
@@ -165,30 +184,39 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Current Monthly Operations Budget
+                      Investment Tier
                     </label>
-                    <Input
-                      placeholder="$5,000 - $10,000"
+                    <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="bg-background/50 border-border/50 focus:border-primary"
+                      className="w-full rounded-2xl border border-gray-800 bg-[#0A0A0F] px-4 py-3 text-sm text-white focus:border-[#7C3AED] focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20"
                       required
-                    />
+                    >
+                      {budgetOptions.map((option) => (
+                        <option key={option.label} value={option.value} disabled={option.disabled}>
+                          {option.label}
+                        </option>
+                      ))}
+                    </select>
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Primary Operations Bottleneck
+                      Key Operational Bottleneck
                     </label>
                     <select
                       value={formData.bottleneck}
                       onChange={(e) => setFormData({ ...formData, bottleneck: e.target.value })}
-                      className="w-full rounded-md border border-border/50 bg-background/50 px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                      className="w-full rounded-2xl border border-gray-800 bg-[#0A0A0F] px-4 py-3 text-sm text-white focus:border-[#7C3AED] focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20"
                       required
                     >
-                      <option value="" disabled>Select your primary bottleneck</option>
+                      <option value="" disabled>
+                        Select your primary bottleneck
+                      </option>
                       {bottleneckOptions.map((option) => (
-                        <option key={option} value={option}>{option}</option>
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
                       ))}
                     </select>
                   </div>

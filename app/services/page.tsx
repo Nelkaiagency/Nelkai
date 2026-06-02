@@ -116,6 +116,24 @@ export default function ServicesPage() {
             ))}
           </div>
         </section>
+
+        <div className="mt-16 text-center border-t border-gray-900 pt-12 max-w-3xl mx-auto px-4">
+          <p className="text-gray-500 text-xs tracking-widest uppercase mb-3 font-mono">
+            Enterprise & Heavy Infrastructure
+          </p>
+          <h3 className="text-white text-lg md:text-xl font-medium mb-6">
+            Operating in supply chain, heavy freight, or tier-1 construction?
+          </h3>
+          <a
+            href="/industrial"
+            className="inline-flex items-center gap-2 bg-[#111115] hover:bg-[#16161c] text-white text-sm font-medium py-3.5 px-8 rounded-full border border-gray-800 hover:border-[#7C3AED] transition-all duration-300 group shadow-lg"
+          >
+            <span>Explore Industrial Frameworks</span>
+            <span className="text-[#7C3AED] group-hover:translate-x-1 transition-transform duration-300">
+              →
+            </span>
+          </a>
+        </div>
       </main>
       <Footer />
     </div>
