@@ -45,7 +45,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="https://calendly.com/nelkai-info/30min"
+              href="https://calendly.com/nelkai-info/30-minute-discovery-call"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +83,7 @@ export function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://calendly.com/nelkai-info/30min"
+                href="https://calendly.com/nelkai-info/30-minute-discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}

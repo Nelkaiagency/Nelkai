@@ -17,7 +17,7 @@ export function HeroSection() {
         </h1>
         
         <p className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-          We automate your Instagram, invoicing, emails and client management so you can focus on what you're actually good at.
+          We automate your Instagram, invoicing, emails and client management so you can focus on high-leverage growth and execution.
         </p>
         
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">

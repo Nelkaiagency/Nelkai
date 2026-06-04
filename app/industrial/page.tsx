@@ -12,7 +12,7 @@ const industrialCards = [
   {
     category: "HEAVY FREIGHT & FLEET BROKERAGE",
     title: "Cross-Border Customs & Proof of Delivery (POD)",
-    inputChannel: "Carrier API Webhooks / Driver Document Scams",
+    inputChannel: "Carrier API Webhooks / Driver Document Scans",
     aiLogic: "Extracting itemized freight line items, route codes, and fuel surcharge rates.",
     outcome: "Protects margin leakage. Instantly matches carrier invoices against original customer quotes.",
   },
