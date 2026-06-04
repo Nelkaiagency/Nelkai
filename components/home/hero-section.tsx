@@ -23,7 +23,7 @@ export function HeroSection() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow-purple text-base px-8 py-6">
-              Book a 15-Minute Discovery Call
+              Book a 30-Minute Discovery Call
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
