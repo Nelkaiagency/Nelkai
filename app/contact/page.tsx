@@ -82,7 +82,7 @@ export default function ContactPage() {
               </div>
 
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Select a time below to lock in a 15-minute technical discovery call directly 
+                Select a time below to lock in a 30-minute technical discovery call directly 
                 with an automation architect.
               </p>
 
@@ -95,7 +95,7 @@ export default function ContactPage() {
 
               <div className="overflow-hidden rounded-3xl border border-gray-900 bg-[#0A0A0F] shadow-[0_20px_80px_rgba(124,58,237,0.12)]">
                 <iframe
-                  src="https://calendly.com/nelkai-info/30min?backgroundColor=0a0a0f&textColor=ffffff&primaryColor=7c3aed"
+                  src="https://calendly.com/nelkai-info/30-minute-discovery-call"
                   title="Nelkai Schedule Audit"
                   className="w-full h-[420px]"
                   frameBorder="0"
@@ -104,7 +104,7 @@ export default function ContactPage() {
               </div>
 
               <p className="mt-4 text-xs leading-relaxed text-gray-500">
-                If the embed does not render, <a href="https://calendly.com/nelkai-info/30min?backgroundColor=0a0a0f&textColor=ffffff&primaryColor=7c3aed" target="_blank" rel="noreferrer" className="text-primary">open the booking experience</a>.
+                If the embed does not render, <a href="https://calendly.com/nelkai-info/30-minute-discovery-call" target="_blank" rel="noreferrer" className="text-primary">open the booking experience</a>.
               </p>
             </div>
 

@@ -66,7 +66,7 @@ export default function PrivacyPage() {
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Contact</h2>
             <p className="mb-8 leading-8 text-muted-foreground">
               For privacy inquiries or to exercise your data rights, please visit our
-              <Link href="/contact" className="text-primary hover:underline"> contact page</Link>
+              <Link href="/contact" className="text-primary hover:underline"> contact page</Link>{' '}
               or email us at <a href="mailto:info@nelkai.com" className="text-primary hover:underline">info@nelkai.com</a>.
             </p>
           </div>
