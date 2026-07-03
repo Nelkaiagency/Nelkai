@@ -33,10 +33,7 @@
   --glow: oklch(0.6 0.25 295 / 0.5);
   --glow-strong: oklch(0.6 0.25 295 / 0.8);
 }
-/* Removed unsupported @custom-variant and @theme rules for broader parser compatibility.
-   Theme variables from the previous @theme block are included below so styles remain intact. */
-
-:root {
+@theme inline {
   --font-sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);

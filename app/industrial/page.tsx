@@ -3,25 +3,32 @@ import { Footer } from "@/components/footer"
 
 const industrialCards = [
   {
-    category: "TIER 1 CONSTRUCTION",
-    title: "Sub-contractor Compliance & Material Dockets",
-    inputChannel: "Site WhatsApp / Project Email Dropbox",
-    aiLogic: "Parsing diverse insurance certificates and concrete delivery volumes.",
-    outcome: "Eliminates manual verification. Compresses compliance onboarding from 5 days to 4 minutes.",
+    category: "CONSTRUCTION OPERATIONS",
+    title: "Job-site coordination and contractor handoffs",
+    inputChannel: "Site updates / project messages / contractor check-ins",
+    aiLogic: "Routing tasks by trade, priority, and site status so work moves through the right sequence.",
+    outcome: "Keeps construction work organised without relying on manual follow-up across crews and subcontractors.",
   },
   {
-    category: "HEAVY FREIGHT & FLEET BROKERAGE",
-    title: "Cross-Border Customs & Proof of Delivery (POD)",
-    inputChannel: "Carrier API Webhooks / Driver Document Scans",
-    aiLogic: "Extracting itemized freight line items, route codes, and fuel surcharge rates.",
-    outcome: "Protects margin leakage. Instantly matches carrier invoices against original customer quotes.",
+    category: "STEEL MANUFACTURING",
+    title: "Production visibility and operational handoffs",
+    inputChannel: "Shop-floor updates / supplier documentation / internal workflow logs",
+    aiLogic: "Capturing production updates, stock movement, and daily exceptions in one place.",
+    outcome: "Improves visibility for steel manufacturing teams without spreading work across spreadsheets and messages.",
   },
   {
-    category: "STEEL & INDUSTRIAL PRODUCTION",
-    title: "Raw Stock Inventory Logs & Procurement Invoices",
-    inputChannel: "Supplier EDI Feeds / Supplier PDF Ingestion",
-    aiLogic: "Tracking batch numbers, laser stock specifications, and heat certificate metrics.",
-    outcome: "Automates raw material logging. Flags pricing variances before invoicing approval lines.",
+    category: "TRUCKING LOGISTICS",
+    title: "Dispatch tracking and driver communication",
+    inputChannel: "Dispatch messages / load updates / driver check-ins",
+    aiLogic: "Tracking job status, loading progress, and delivery exceptions as they happen.",
+    outcome: "Helps trucking logistics teams keep dispatch and field operations aligned.",
+  },
+  {
+    category: "GENERAL CONTRACTING",
+    title: "Trade sequencing and subcontractor coordination",
+    inputChannel: "Task lists / contractor updates / site progress notes",
+    aiLogic: "Linking field tasks to the right trade sequence so team members can see what needs to happen next.",
+    outcome: "Supports more reliable coordination for general contracting work with multiple moving parts.",
   },
 ]
 
@@ -35,10 +42,10 @@ export default function IndustrialPage() {
             INDUSTRIAL USE CASES
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
-            Operational AI for heavy industry and logistics
+            Operational systems for construction, steel manufacturing, trucking logistics, and general contracting
           </h1>
           <p className="mt-4 text-base sm:text-lg text-gray-400 max-w-3xl mx-auto">
-            Real-world workflows built to tame complex compliance, freight, and procurement data.
+            Practical workflows for teams coordinating crews, sites, dispatch, and field operations without relying on disconnected processes.
           </p>
         </section>
 
@@ -83,29 +90,29 @@ export default function IndustrialPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <p className="text-xs font-mono uppercase tracking-[0.32em] text-gray-500 mb-4">
-                  DATA GOVERNANCE & SECURITY
+                  OPERATIONAL SAFEGUARDS
                 </p>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                  Enterprise-Grade Safeguards for Heavy Infrastructure
+                  Clear controls for active field and site operations
                 </h2>
               </div>
 
               <div className="grid gap-8 lg:grid-cols-2">
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">
-                    Zero-Retention Data Isolation
+                    Role-based access and task control
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-300">
-                    All processing pipelines route document buffers through isolated, zero-retention enterprise API endpoints. Your operational data, site dockets, and financial ledgers are fully encrypted in transit and at rest. Data processed through Nelkai solutions is structurally excluded from public LLM training sets or external model optimizations.
+                    Operational systems can be configured so supervisors, site teams, and admin staff each work from the right view, with task ownership and status updates tracked in a clear structure.
                   </p>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-white">
-                    Legacy System Interoperability
+                    Workflow integration for existing operations
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-300">
-                    Our custom middleware layers bridge cutting-edge automation models with existing heavy equipment, ERP, and project management ecosystems. We offer seamless direct-write and ingestion pipelines for Procore, Autodesk BIM 360, SAP, Oracle Primavera, Wave Accounting, and standard relational SQL databases.
+                    The systems are shaped around the tools and routines teams already use, so field communication, dispatch updates, and operational reporting can be brought into one working layer.
                   </p>
                 </div>
               </div>

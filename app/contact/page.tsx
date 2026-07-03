@@ -8,27 +8,20 @@ import { Calendar, Send } from "lucide-react"
 import { useState } from "react"
 
 const bottleneckOptions = [
-  "ERP & Asset Management Integration",
-  "Supply Chain Visibility",
-  "Compliance & Regulatory Audit",
-  "Data Pipeline Orchestration",
-  "Operational Cost Control",
+  "Maintenance & contractor dispatch",
+  "Housekeeping or staff coordination",
+  "Invoicing & payments",
+  "Job or fleet tracking",
+  "General operations visibility",
   "Other",
-]
-
-const budgetOptions = [
-  { value: "", label: "Select budget range...", disabled: true },
-  { value: "SME Frameworks (€300 - €800 / mo)", label: "SME Frameworks (€300 - €800 / mo)" },
-  { value: "Custom Enterprise Architecture (€1,000 - €3,000 / mo)", label: "Custom Enterprise Architecture (€1,000 - €3,000 / mo)" },
-  { value: "Strategic Transformation (€3,000+ / mo)", label: "Strategic Transformation (€3,000+ / mo)" },
 ]
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
-    title: "",
+    role: "",
     website: "",
-    budget: "",
+    scope: "",
     bottleneck: "",
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -60,10 +53,10 @@ export default function ContactPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
-              Let&apos;s Build Your Automation Stack
+              Let&apos;s talk through your operations
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose how you&apos;d like to connect with our automation architects.
+              Choose the easiest way to start: a short discovery call or a simple form with the basics.
             </p>
           </div>
 
@@ -82,14 +75,13 @@ export default function ContactPage() {
               </div>
 
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Select a time below to lock in a 30-minute technical discovery call directly 
-                with an automation architect.
+                Select a time below for a 30-minute discovery call to talk through the work, the workflow, and the next step.
               </p>
 
               <div className="rounded-3xl border border-gray-800 bg-[#0A0A0F] p-6">
               <div className="mb-6">
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Lock a dedicated audit slot with our enterprise automation architect, then receive a tailored discovery brief for your organization.
+                  Lock a dedicated audit slot and we’ll follow up with a clear summary of the operational priorities we would focus on first.
                 </p>
               </div>
 
@@ -126,8 +118,7 @@ export default function ContactPage() {
               </div>
 
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Prefer an email assessment? Provide your business operational details to see 
-                if you qualify for an integration sprint.
+                Prefer to send a few details first? Share the basics and we’ll get back to you with an appropriate next step.
               </p>
 
               {isSubmitted ? (
@@ -157,12 +148,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Corporate Title
+                        Your Role
                       </label>
                       <Input
                         placeholder="Operations Manager"
-                        value={formData.title}
-                        onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+                        value={formData.role}
+                        onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                         className="bg-background/50 border-border/50 focus:border-primary"
                         required
                       />
@@ -184,25 +175,21 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Investment Tier
+                      Tell us a bit about your operation
                     </label>
-                    <select
-                      value={formData.budget}
-                      onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full rounded-2xl border border-gray-800 bg-[#0A0A0F] px-4 py-3 text-sm text-white focus:border-[#7C3AED] focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20"
+                    <textarea
+                      placeholder="Property count, fleet size, crew size, or any context that helps us size the scope"
+                      value={formData.scope}
+                      onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
+                      rows={3}
+                      className="w-full rounded-2xl border border-gray-800 bg-[#0A0A0F] px-4 py-3 text-sm text-white focus:border-[#7C3AED] focus:outline-none focus:ring-1 focus:ring-[#7C3AED]/20 resize-none"
                       required
-                    >
-                      {budgetOptions.map((option) => (
-                        <option key={option.label} value={option.value} disabled={option.disabled}>
-                          {option.label}
-                        </option>
-                      ))}
-                    </select>
+                    />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Key Operational Bottleneck
+                      What is the main challenge?
                     </label>
                     <select
                       value={formData.bottleneck}
@@ -211,7 +198,7 @@ export default function ContactPage() {
                       required
                     >
                       <option value="" disabled>
-                        Select your primary bottleneck
+                        Select the main issue
                       </option>
                       {bottleneckOptions.map((option) => (
                         <option key={option} value={option}>

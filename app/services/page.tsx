@@ -2,56 +2,56 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Mail, FileText, Clock, Instagram, CheckCircle, Zap, ArrowRight } from "lucide-react"
+import { ArrowRight, Building2, Wrench, ClipboardList, Users, Banknote, HardHat, Factory, Truck, Blocks } from "lucide-react"
 
-const services = [
+const hospitalityModules = [
   {
-    icon: Mail,
-    number: 1,
-    title: "Email Management",
-    whatItDoes: "AI reads every inbound email, classifies it by type and priority, drafts a contextual reply, and either saves it for review or sends automatically.",
-    automated: ["Reading", "Sorting", "Drafting", "Labelling", "Archiving"],
-    example: "A hotel receives 40 emails per day. Booking enquiries get a draft reply with availability. Spam is archived. Invoices are flagged. The owner spends 10 minutes reviewing instead of 2 hours replying.",
+    icon: Wrench,
+    title: "Maintenance & Contractor Dispatch",
+    description: "Ticket creation, contractor assignment, and completion tracking for maintenance work that needs a clear sequence of trades.",
   },
   {
-    icon: FileText,
-    number: 2,
-    title: "Invoice Automation",
-    whatItDoes: "When a job or session is marked complete, an invoice is automatically generated, personalised, and emailed to the client.",
-    automated: ["Invoice creation", "PDF generation", "Email delivery", "Payment tracking"],
-    example: "A personal trainer finishes a session. The job tracker is updated. Within seconds the client receives a branded invoice with payment details. No manual input from the trainer.",
+    icon: ClipboardList,
+    title: "Housekeeping & Unit Operations",
+    description: "Checklists by property or unit type, staff dispatch, and live tracking across rooms, units, or sites.",
   },
   {
-    icon: Clock,
-    number: 3,
-    title: "Payment Chasing",
-    whatItDoes: "Monitors all invoices daily. Sends escalating reminder emails at 7, 14, and 21 days overdue. Stops automatically when the invoice is paid.",
-    automated: ["Overdue detection", "Reminder scheduling", "Email sending", "Status tracking"],
-    example: "A photography studio has 3 unpaid invoices. At day 7 a friendly reminder goes out. Day 14 a firmer message. Day 21 a final notice. All without the photographer touching anything.",
+    icon: Users,
+    title: "Staff Roles & Permissions",
+    description: "Role-based access for maintenance, housekeeping, admin, and multi-site teams so the right people see the right actions.",
   },
   {
-    icon: Instagram,
-    number: 4,
-    title: "Instagram Content Agent",
-    whatItDoes: "Pulls content briefs from a spreadsheet, uses AI to write captions and hashtags, queues posts to Buffer for scheduling. Owner approves before posts go live.",
-    automated: ["Caption writing", "Hashtag generation", "Post scheduling", "Content calendar management"],
-    example: "A barbershop fills in a weekly content brief — 4 post topics. AI writes all 4 captions with hashtags. Posts are queued. The barber approves in Buffer in 5 minutes. Consistent posting every week.",
+    icon: Building2,
+    title: "Guest & Tenant Communication",
+    description: "Booking confirmations, issue reporting, and automated status updates for guests, tenants, and internal teams.",
   },
   {
-    icon: CheckCircle,
-    number: 5,
-    title: "Booking Confirmation",
-    whatItDoes: "When a new booking is added to the system, a personalised confirmation email is sent to the client automatically with all session details.",
-    automated: ["Email creation", "Personalisation", "Delivery", "Logging"],
-    example: "A music studio gets a new booking via their website. Within seconds the artist receives a confirmation with session time, engineer name, studio address, and preparation notes. No manual email needed.",
+    icon: Banknote,
+    title: "Invoicing & Financial Ops",
+    description: "Automated billing, payment tracking, and support for retainers or contract-based work.",
+  },
+]
+
+const industrialModules = [
+  {
+    icon: HardHat,
+    title: "Construction operations",
+    description: "Operational systems for construction companies that need dependable coordination across crews, tasks, and job sites.",
   },
   {
-    icon: Zap,
-    number: 6,
-    title: "NFC Systems",
-    whatItDoes: "Branded NFC cards and tags are deployed at client locations. Each tap triggers a digital action connected to the automation stack.",
-    automated: ["Booking triggers", "Loyalty tracking", "Access logging", "Analytics reporting"],
-    example: "A restaurant places NFC tags on every table. Customers tap to view the menu and book a table. The booking triggers a confirmation email. After the visit an automated review request is sent. The manager sees all tap analytics in a live dashboard.",
+    icon: Factory,
+    title: "Steel manufacturing",
+    description: "Workflow support for steel manufacturing teams managing internal handoffs, production coordination, and daily operational visibility.",
+  },
+  {
+    icon: Truck,
+    title: "Trucking logistics",
+    description: "Practical systems for trucking logistics work that depends on clear dispatch, job tracking, and field communication.",
+  },
+  {
+    icon: Blocks,
+    title: "General contracting",
+    description: "Structured operational support for general contracting work where multiple trades and moving parts need a shared workflow.",
   },
 ]
 
@@ -60,98 +60,98 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="pt-24 pb-16">
-        {/* Header */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
-            What We Automate
+            Operations systems for two kinds of teams
           </h1>
           <p className="mt-4 text-xl font-semibold text-primary">
-            Built once. Running forever.
+            Hospitality & property operations, and industrial field operations.
           </p>
           <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Six core automation services that eliminate manual work and scale your operations effortlessly.
+            Nelkai builds practical infrastructure for operators managing properties, contractors, crews, and daily work across complex environments. We bring bookings, invoices, jobs, and payments into one place, build custom tools around the way each business actually operates, and automate the dispatch, invoicing, and communication steps that usually slow teams down.
           </p>
         </section>
 
-        {/* Services Grid */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="space-y-8">
-            {services.map((service) => {
-              const Icon = service.icon
+          <div className="mb-10">
+            <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+              Track A
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Hospitality & Property Ops
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              We work with businesses that need cleaner day-to-day operations across maintenance, housekeeping, staff coordination, and communication.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {hospitalityModules.map((module, index) => {
+              const Icon = module.icon
               return (
-                <div
-                  key={service.number}
-                  className="rounded-2xl border border-border/50 bg-card/30 overflow-hidden hover:bg-card/50 transition-colors"
-                >
-                  <div className="p-8 lg:p-10">
-                    {/* Header */}
-                    <div className="flex items-start gap-6 mb-6">
-                      <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-8 h-8 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-baseline gap-3 mb-2">
-                          <span className="text-sm font-semibold text-primary">SERVICE {service.number}</span>
-                        </div>
-                        <h2 className="text-2xl lg:text-3xl font-bold text-foreground">{service.title}</h2>
-                      </div>
-                    </div>
-
-                    {/* What It Does */}
-                    <div className="mb-8">
-                      <h3 className="text-sm font-semibold text-primary mb-3">What It Does</h3>
-                      <p className="text-muted-foreground leading-relaxed">{service.whatItDoes}</p>
-                    </div>
-
-                    {/* What's Automated */}
-                    <div className="mb-8">
-                      <h3 className="text-sm font-semibold text-primary mb-3">What's Automated</h3>
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        {service.automated.map((item, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                            <span className="text-sm text-muted-foreground">{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Real Example */}
-                    <div className="bg-background/50 rounded-xl border border-border/30 p-6">
-                      <h3 className="text-sm font-semibold text-primary mb-3">Real Example</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{service.example}</p>
-                    </div>
+                <div key={index} className="rounded-2xl border border-border/50 bg-card/30 p-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{module.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{module.description}</p>
                 </div>
               )
             })}
           </div>
         </section>
 
-        {/* Everything Connects Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="mb-10">
+            <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
+              Track B
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Industrial Operations
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl">
+              For construction companies, steel manufacturing teams, trucking logistics operations, and general contracting work that depends on field coordination.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {industrialModules.map((module, index) => {
+              const Icon = module.icon
+              return (
+                <div key={index} className="rounded-2xl border border-border/50 bg-card/30 p-8">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{module.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{module.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
           <div className="rounded-2xl border border-primary/50 bg-card/80 glow-purple-strong p-8 lg:p-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Everything Connects.
+              A practical operating layer, not a patchwork of tools.
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Every Nelkai service is built on the same infrastructure. Email, invoicing, Instagram, bookings, and NFC all feed into one system. Data flows between them automatically. The result is a business that runs itself.
+              The work is built around process clarity: who owns the task, what happens next, and how the team stays informed when conditions change. It is also about bringing the day-to-day pieces of the business into one view so owners are not chasing updates across disconnected tools.
             </p>
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="rounded-2xl border border-border/50 bg-card/30 p-8 lg:p-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-              Ready to Automate Your Business?
+              Ready to talk through your operations?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's design a custom automation stack tailored to your operations.
+              We can outline the structure of the workflow, the permissions model, and the handoffs that matter most.
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow-purple text-base px-8 py-6">
-                Book a Free Discovery Call
+                Book a Discovery Call
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

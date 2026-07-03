@@ -8,13 +8,13 @@ import { CheckCircle2, Send } from "lucide-react"
 import { useState } from "react"
 
 const businessTypes = [
-  "Hospitality",
-  "Retail",
-  "Beauty & Wellness",
-  "Fitness & Sports",
-  "Events",
-  "Professional Services",
-  "Food & Beverage",
+  "Hostel or hotel",
+  "Property management",
+  "Hospitality operations",
+  "Construction",
+  "General contracting",
+  "Logistics or trucking",
+  "Industrial operations",
   "Other",
 ]
 
@@ -26,12 +26,12 @@ const staffOptions = [
 ]
 
 const timeDrainOptions = [
-  "Email management",
+  "Maintenance dispatch",
+  "Contractor coordination",
+  "Staff scheduling",
   "Invoicing & payments",
-  "Social media content",
-  "Booking confirmations",
-  "Payment chasing",
-  "Customer follow-up",
+  "Job or fleet tracking",
+  "Operations visibility",
   "Other",
 ]
 
@@ -45,7 +45,6 @@ export default function AuditPage() {
     timeDrains: [] as string[],
     usingAutomation: "",
     automationTools: "",
-    nfcInterested: false,
     additionalNotes: "",
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -100,10 +99,10 @@ export default function AuditPage() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
-              Free Automation Audit
+              Free Operations Audit
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Tell us about your business. We'll identify exactly what should be automated and send you a free report within 48 hours.
+              Tell us about your operation. We’ll point out where the work is slowing down and where a better workflow or custom tool would make the most difference.
             </p>
           </div>
 
@@ -118,7 +117,7 @@ export default function AuditPage() {
                   Your audit request has been received.
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Thanks {formData.yourName}, we've received your audit request. We'll review your business and send your free automation audit within 48 hours.
+                  Thanks {formData.yourName}, we've received your audit request. We'll review your operation and send your free audit within 48 hours.
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Check your inbox at <span className="text-primary font-semibold">{formData.email}</span> for confirmation and updates.
@@ -134,7 +133,7 @@ export default function AuditPage() {
                     </label>
                     <Input
                       type="text"
-                      placeholder="e.g. Sarah's Beauty Studio"
+                      placeholder="e.g. Harbour House Hostel"
                       value={formData.businessName}
                       onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                       className="bg-background/50 border-border/50 focus:border-primary"
@@ -147,7 +146,7 @@ export default function AuditPage() {
                     </label>
                     <Input
                       type="text"
-                      placeholder="e.g. Sarah"
+                      placeholder="e.g. Alex"
                       value={formData.yourName}
                       onChange={(e) => setFormData({ ...formData, yourName: e.target.value })}
                       className="bg-background/50 border-border/50 focus:border-primary"
@@ -163,7 +162,7 @@ export default function AuditPage() {
                   </label>
                   <Input
                     type="email"
-                    placeholder="sarah@example.com"
+                    placeholder="alex@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-background/50 border-border/50 focus:border-primary"
@@ -293,20 +292,6 @@ export default function AuditPage() {
                   </div>
                 )}
 
-                {/* NFC Interest - Checkbox */}
-                <div className="flex items-start">
-                  <input
-                    type="checkbox"
-                    id="nfc-interest"
-                    checked={formData.nfcInterested}
-                    onChange={(e) => setFormData({ ...formData, nfcInterested: e.target.checked })}
-                    className="w-4 h-4 rounded border-border/50 bg-background/50 text-primary cursor-pointer mt-1"
-                  />
-                  <label htmlFor="nfc-interest" className="ml-3 text-sm text-muted-foreground cursor-pointer">
-                    I'm interested in NFC cards/tags for my business
-                  </label>
-                </div>
-
                 {/* Additional Notes */}
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -332,7 +317,7 @@ export default function AuditPage() {
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  We'll send your free automation audit report within 48 hours.
+                  We'll send your free operations audit report within 48 hours.
                 </p>
               </form>
             )}

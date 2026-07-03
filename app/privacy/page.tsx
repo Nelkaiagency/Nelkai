@@ -31,10 +31,6 @@ export default function PrivacyPage() {
               Personal details may include name, email address, phone number, company,
               and job title.
             </p>
-            <p className="mb-8 leading-8 text-muted-foreground">
-              <strong className="text-white">NFC Interaction Data:</strong> When NFC cards or tags deployed by Nelkai are tapped, we collect the timestamp of the tap, general device type, and geographic location data if enabled. We do not collect personal data from NFC taps unless the user actively submits information through a form triggered by the tap.
-            </p>
-
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">How We Use Your Information</h2>
             <p className="mb-8 leading-8 text-muted-foreground">
               We use personal information to respond to inquiries, provide and improve
@@ -42,10 +38,6 @@ export default function PrivacyPage() {
               updates. Aggregated or anonymized data is used for analytics and product
               improvement.
             </p>
-            <p className="mb-8 leading-8 text-muted-foreground">
-              <strong className="text-white">NFC Analytics:</strong> NFC analytics data is used solely to provide clients with performance reporting on their NFC deployments. This data is aggregated and anonymised for reporting purposes. It is not sold or shared with third parties.
-            </p>
-
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Sharing and Disclosure</h2>
             <p className="mb-8 leading-8 text-muted-foreground">
               We share information only as necessary to deliver our services or when
@@ -56,7 +48,7 @@ export default function PrivacyPage() {
 
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Data Retention</h2>
             <p className="mb-8 leading-8 text-muted-foreground">
-              NFC tap data is retained for 12 months and then automatically deleted unless the client requests extended retention in writing. Personal information provided through our website or contact forms is retained for as long as necessary to fulfil the purposes outlined in this policy unless a longer retention period is required by law.
+              Personal information provided through our website or contact forms is retained for as long as necessary to fulfil the purposes outlined in this policy unless a longer retention period is required by law.
             </p>
 
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Security</h2>
@@ -73,20 +65,6 @@ export default function PrivacyPage() {
               or delete your personal information. To exercise these rights, please
               contact us using the details below.
             </p>
-            <p className="mb-8 leading-8 text-muted-foreground">
-              If you have interacted with a Nelkai NFC tag and wish to request deletion of any associated data, contact <a href="mailto:info@nelkai.com" className="text-primary hover:underline">info@nelkai.com</a> with the subject line "NFC Data Request".
-            </p>
-
-            <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Third Party NFC Platforms</h2>
-            <p className="mb-8 leading-8 text-muted-foreground">
-              Nelkai may use third-party NFC management platforms to deliver tap analytics and landing page functionality. These platforms process tap data under their own privacy policies. Nelkai selects only platforms compliant with GDPR and applicable data protection law.
-            </p>
-
-            <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">GDPR Consent</h2>
-            <p className="mb-8 leading-8 text-muted-foreground">
-              By interacting with a Nelkai NFC tag, users consent to the collection of anonymised interaction data as described above. No personal data is collected without explicit user input.
-            </p>
-
             <h2 className="mt-12 mb-4 text-3xl font-semibold text-white">Contact</h2>
             <p className="mb-8 leading-8 text-muted-foreground">
               For privacy inquiries or to exercise your data rights, please visit our
