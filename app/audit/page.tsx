@@ -182,9 +182,15 @@ export default function AuditPage() {
                       className="w-full rounded-lg border border-border/50 bg-background/50 px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20"
                       required
                     >
-                      <option value="">Select business type...</option>
+                      <option value="" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+                        Select business type...
+                      </option>
                       {businessTypes.map((type) => (
-                        <option key={type} value={type}>
+                        <option
+                          key={type}
+                          value={type}
+                          style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}
+                        >
                           {type}
                         </option>
                       ))}
@@ -200,9 +206,15 @@ export default function AuditPage() {
                       className="w-full rounded-lg border border-border/50 bg-background/50 px-3 py-2 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/20"
                       required
                     >
-                      <option value="">Select staff count...</option>
+                      <option value="" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
+                        Select staff count...
+                      </option>
                       {staffOptions.map((option) => (
-                        <option key={option} value={option}>
+                        <option
+                          key={option}
+                          value={option}
+                          style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}
+                        >
                           {option}
                         </option>
                       ))}
