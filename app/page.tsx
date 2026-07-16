@@ -3,6 +3,7 @@ import { ArrowRight, Building2, HardHat } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/home/hero-section"
+import { SimpleAutomationCtaSection } from "@/components/home/simple-automation-cta-section"
 import { Button } from "@/components/ui/button"
 
 const tracks = [
@@ -67,6 +68,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <SimpleAutomationCtaSection />
 
         <section className="py-20 sm:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

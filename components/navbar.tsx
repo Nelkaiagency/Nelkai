@@ -10,6 +10,7 @@ import { useState } from "react"
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/simple-automation", label: "Simple Automation" },
   { href: "/case-studies", label: "Case Studies" },
   { href: "/audit", label: "Free Audit" },
   { href: "/contact", label: "Contact" },
@@ -46,7 +47,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <a
-              href="https://calendly.com/nelkai-info/30-minute-discovery-call"
+              href="https://calendly.com/nelkai-info/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -84,7 +85,7 @@ export function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://calendly.com/nelkai-info/30-minute-discovery-call"
+                href="https://calendly.com/nelkai-info/new-meeting"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}

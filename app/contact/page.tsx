@@ -87,7 +87,7 @@ export default function ContactPage() {
 
               <div className="overflow-hidden rounded-3xl border border-gray-900 bg-[#0A0A0F] shadow-[0_20px_80px_rgba(124,58,237,0.12)]">
                 <iframe
-                  src="https://calendly.com/nelkai-info/30-minute-discovery-call"
+                  src="https://calendly.com/nelkai-info/new-meeting"
                   title="Nelkai Schedule Audit"
                   className="w-full h-[420px]"
                   frameBorder="0"
@@ -96,7 +96,7 @@ export default function ContactPage() {
               </div>
 
               <p className="mt-4 text-xs leading-relaxed text-gray-500">
-                If the embed does not render, <a href="https://calendly.com/nelkai-info/30-minute-discovery-call" target="_blank" rel="noreferrer" className="text-primary">open the booking experience</a>.
+                If the embed does not render, <a href="https://calendly.com/nelkai-info/new-meeting" target="_blank" rel="noreferrer" className="text-primary">open the booking experience</a>.
               </p>
             </div>
 
