@@ -7,14 +7,13 @@ export function SimpleAutomationCtaSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-border/50 bg-card/60 p-8 sm:p-12 lg:p-16">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-            For small businesses & solo operators
+            Start with one workflow
           </p>
           <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-foreground max-w-2xl">
-            Running your business from Instagram and a notebook? We can fix the parts that waste your evenings.
+            Make everyday follow-up easier to manage.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-            Missed DMs, slow replies, manual bookings, chasing payments — simple, affordable fixes for driving
-            instructors, tradespeople, and small service businesses. No jargon, no long contracts.
+            Enquiry routing, viewing and test-drive reminders, or maintenance updates: choose a focused starting point for your property business or dealership. Scope and costs are agreed before implementation.
           </p>
           <div className="mt-8">
             <Link href="/simple-automation">

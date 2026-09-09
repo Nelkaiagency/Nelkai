@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Building2, HardHat } from "lucide-react"
+import { ArrowRight, Building2, Home, Car } from "lucide-react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/home/hero-section"
@@ -7,15 +7,16 @@ import { SimpleAutomationCtaSection } from "@/components/home/simple-automation-
 import { Button } from "@/components/ui/button"
 
 const tracks = [
+  { icon: Car, title: "Small Car Dealerships", description: "Organise vehicle enquiries, test drives, sales follow-ups, and preparation tasks with a clear next action for your team." },
   {
     icon: Building2,
-    title: "Hospitality & Property Ops",
-    description: "Maintenance dispatch, housekeeping workflows, staff permissions, guest updates, and the day-to-day coordination that keeps properties moving.",
+    title: "Property Management",
+    description: "Keep maintenance requests, contractor assignments, inspections, and tenant updates organised across your properties.",
   },
   {
-    icon: HardHat,
-    title: "Industrial Operations",
-    description: "Clearer handoffs for construction, steel manufacturing, trucking logistics, and general contracting teams working across job sites and crews.",
+    icon: Home,
+    title: "Real Estate & Estate Agents",
+    description: "Track property enquiries, arrange viewings, and keep buyer, seller, and landlord follow-ups moving.",
   },
 ]
 
@@ -29,12 +30,12 @@ export default function HomePage() {
         <section className="py-20 sm:py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Proof point</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Our approach</p>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                Stay Cork is a live example of the work.
+                Start with the work that needs attention.
               </h2>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                We are building a practical operations platform for a property and hostel operation, shaping work around maintenance dispatch, housekeeping, contractor handoffs, and staff permissions.
+                We start by understanding your current process, the tools you use, and where work gets delayed. Together, we can choose one useful workflow to improve and agree how to assess it before building.
               </p>
             </div>
           </div>
@@ -45,14 +46,14 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">What we build</p>
               <h2 className="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                Connected operations for the work that keeps moving.
+                Practical tools for three kinds of business.
               </h2>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                We bring bookings, invoices, jobs, and payments into one place, build tools around how your team works, and automate the follow-through that usually gets lost.
+                NELKAI offers custom software and workflow automation for property managers, estate agents, and small car dealerships. The focus is on enquiries, coordination, and everyday follow-up.
               </p>
             </div>
 
-            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {tracks.map((track) => {
                 const Icon = track.icon
                 return (
@@ -75,10 +76,10 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl border border-primary/30 bg-card/80 p-8 sm:p-12 lg:p-16">
               <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-                If your team is juggling sites, contractors, rooms, or crews, we can help.
+                What is taking up too much of your day?
               </h2>
               <p className="mt-4 max-w-2xl text-lg text-muted-foreground leading-relaxed">
-                We can shape the workflow, permissions, and handoffs that matter most without turning the process into a long implementation project.
+                Tell us about a recurring problem: tenant requests, viewing arrangements, vehicle enquiries, or another task your team keeps chasing. We can explore whether a simpler process or a small automation would help.
               </p>
               <div className="mt-8">
                 <Link href="/contact">

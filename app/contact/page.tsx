@@ -9,9 +9,9 @@ import { useState } from "react"
 
 const bottleneckOptions = [
   "Maintenance & contractor dispatch",
-  "Housekeeping or staff coordination",
+  "Property enquiries & viewing arrangements",
   "Invoicing & payments",
-  "Job or fleet tracking",
+  "Vehicle enquiries & test-drive follow-up",
   "General operations visibility",
   "Other",
 ]
@@ -19,6 +19,7 @@ const bottleneckOptions = [
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     role: "",
     website: "",
     scope: "",
@@ -56,7 +57,7 @@ export default function ContactPage() {
               Let&apos;s talk through your operations
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose the easiest way to start: a short discovery call or a simple form with the basics.
+              For property managers, estate agents, and small car dealerships. Book a discovery call or tell us which recurring task is slowing your team down.
             </p>
           </div>
 
@@ -69,19 +70,19 @@ export default function ContactPage() {
                   <Calendar className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-foreground">Schedule an Operations Audit</h2>
+                  <h2 className="text-xl font-bold text-foreground">Book a Discovery Call</h2>
                   <p className="text-sm text-muted-foreground">Option A: Direct Booking</p>
                 </div>
               </div>
 
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Select a time below for a 30-minute discovery call to talk through the work, the workflow, and the next step.
+                Select a time below for a discovery call to talk through the work, the workflow, and the next step.
               </p>
 
               <div className="rounded-3xl border border-gray-800 bg-[#0A0A0F] p-6">
               <div className="mb-6">
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Lock a dedicated audit slot and we’ll follow up with a clear summary of the operational priorities we would focus on first.
+                  Bring an example of a task you repeat and the tools you use today. We can discuss a useful starting point.
                 </p>
               </div>
 
@@ -101,7 +102,7 @@ export default function ContactPage() {
             </div>
 
             <p className="mt-6 text-xs leading-relaxed text-gray-500">
-              🔒 Confidentiality Guaranteed: All project metrics discussed during structural evaluations are protected under standard corporate NDA parameters.
+              Please share a general description of the workflow and avoid including sensitive customer or tenant information.
             </p>
           </div>
 
@@ -113,7 +114,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-foreground">Tell Us About Your Bottlenecks</h2>
-                  <p className="text-sm text-muted-foreground">Option B: Pre-Qualification</p>
+                  <p className="text-sm text-muted-foreground">Send a few details</p>
                 </div>
               </div>
 
@@ -128,11 +129,15 @@ export default function ContactPage() {
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Request Submitted</h3>
                   <p className="text-sm text-muted-foreground">
-                    Our team will review your details and reach out within 24-48 hours.
+                    Thank you. We will review your details and reply using the email address you provided.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="contact-email" className="block text-sm font-medium text-foreground mb-2">Email address</label>
+                    <Input id="contact-email" type="email" autoComplete="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="bg-background/50 border-border/50 focus:border-primary" />
+                  </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
@@ -178,7 +183,7 @@ export default function ContactPage() {
                       Tell us a bit about your operation
                     </label>
                     <textarea
-                      placeholder="Property count, fleet size, crew size, or any context that helps us size the scope"
+                      placeholder="Tell us whether you manage properties, run an estate agency, or sell vehicles, and describe the task you want to improve"
                       value={formData.scope}
                       onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
                       rows={3}
@@ -212,7 +217,7 @@ export default function ContactPage() {
                     type="submit" 
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground glow-purple mt-2"
                   >
-                    Submit Audit Request
+                    Discuss My Workflow
                     <Send className="ml-2 w-4 h-4" />
                   </Button>
                 </form>

@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/simple-automation", label: "Simple Automation" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/case-studies", label: "Use Cases" },
   { href: "/audit", label: "Free Audit" },
   { href: "/contact", label: "Contact" },
 ]
