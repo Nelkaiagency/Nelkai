@@ -3,15 +3,15 @@ import { Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const spaceGrotesk = Space_Grotesk({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: '--font-sans'
 });
 
 export const metadata: Metadata = {
-  title: 'NELKAI | Automation for Property, Estate Agents & Car Dealerships',
-  description: 'Custom software and workflow automation for property management, real estate and estate agents, and small car dealerships. Explore enquiry, scheduling, and follow-up workflows.',
-  keywords: ['operations systems', 'workflow automation', 'property management', 'estate agents', 'real estate', 'small car dealerships', 'custom software'],
+  title: 'NELKAI | Workflow Automation for Property & Dealership Businesses',
+  description: 'NELKAI maps and improves recurring workflows for property management companies, estate agents, real estate teams, and small car dealerships using focused software and automation.',
+  keywords: ['workflow automation', 'property management software', 'estate agent automation', 'real estate workflow', 'car dealership automation', 'custom software'],
 }
 
 export default function RootLayout({

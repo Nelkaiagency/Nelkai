@@ -9,10 +9,9 @@ import { useState } from "react"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/simple-automation", label: "Simple Automation" },
+  { href: "/services", label: "Industries" },
   { href: "/case-studies", label: "Use Cases" },
-  { href: "/audit", label: "Free Audit" },
+  { href: "/audit", label: "Workflow Review" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -28,16 +27,13 @@ export function Navbar() {
             <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === link.href 
-                    ? "text-primary" 
-                    : "text-muted-foreground"
+                  pathname === link.href ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 {link.label}
@@ -57,16 +53,15 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50">
             <div className="flex flex-col gap-4">
@@ -76,9 +71,7 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    pathname === link.href 
-                      ? "text-primary" 
-                      : "text-muted-foreground"
+                    pathname === link.href ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
                   {link.label}
