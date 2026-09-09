@@ -8,13 +8,9 @@ import { CheckCircle2, Send } from "lucide-react"
 import { useState } from "react"
 
 const businessTypes = [
-  "Hostel or hotel",
   "Property management",
-  "Hospitality operations",
-  "Construction",
-  "General contracting",
-  "Logistics or trucking",
-  "Industrial operations",
+  "Real estate / estate agency",
+  "Small car dealership",
   "Other",
 ]
 
@@ -28,9 +24,9 @@ const staffOptions = [
 const timeDrainOptions = [
   "Maintenance dispatch",
   "Contractor coordination",
-  "Staff scheduling",
+  "Viewing & test-drive scheduling",
   "Invoicing & payments",
-  "Job or fleet tracking",
+  "Enquiry tracking & follow-up",
   "Operations visibility",
   "Other",
 ]
@@ -102,7 +98,7 @@ export default function AuditPage() {
               Free Operations Audit
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
-              Tell us about your operation. We’ll point out where the work is slowing down and where a better workflow or custom tool would make the most difference.
+              Tell us about your property management business, estate agency, or small car dealership. We will review your current workflow and suggest a focused starting point.
             </p>
           </div>
 
@@ -117,10 +113,10 @@ export default function AuditPage() {
                   Your audit request has been received.
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Thanks {formData.yourName}, we've received your audit request. We'll review your operation and send your free audit within 48 hours.
+                  Thanks {formData.yourName}, we've received your audit request. We will review your details and email you about the next step.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Check your inbox at <span className="text-primary font-semibold">{formData.email}</span> for confirmation and updates.
+                  Check your inbox at <span className="text-primary font-semibold">{formData.email}</span> for our reply.
                 </p>
               </div>
             ) : (
@@ -133,7 +129,7 @@ export default function AuditPage() {
                     </label>
                     <Input
                       type="text"
-                      placeholder="e.g. Harbour House Hostel"
+                      placeholder="Your business name"
                       value={formData.businessName}
                       onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                       className="bg-background/50 border-border/50 focus:border-primary"
@@ -329,7 +325,7 @@ export default function AuditPage() {
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  We'll send your free operations audit report within 48 hours.
+                  We will review your request and contact you by email. No purchase is required.
                 </p>
               </form>
             )}

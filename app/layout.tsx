@@ -9,9 +9,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Nelkai | Operations systems for hospitality, property, and industrial teams',
-  description: 'Nelkai builds connected operations for hospitality and property teams, plus custom tools and workflow automation for industrial operations.',
-  keywords: ['operations systems', 'workflow automation', 'property operations', 'industrial operations', 'custom software'],
+  title: 'NELKAI | Automation for Property, Estate Agents & Car Dealerships',
+  description: 'Custom software and workflow automation for property management, real estate and estate agents, and small car dealerships. Explore enquiry, scheduling, and follow-up workflows.',
+  keywords: ['operations systems', 'workflow automation', 'property management', 'estate agents', 'real estate', 'small car dealerships', 'custom software'],
 }
 
 export default function RootLayout({

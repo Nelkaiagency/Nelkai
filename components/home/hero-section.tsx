@@ -10,13 +10,13 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
-          <span className="text-gradient">Operations systems</span>
+          <span className="text-gradient">Less admin. Clearer follow-up.</span>
           <br />
-          <span className="text-foreground">for hospitality, property, and industrial teams.</span>
+          <span className="text-foreground">For property and vehicle businesses.</span>
         </h1>
 
         <p className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-          Nelkai builds connected operations for businesses that depend on clear work, strong handoffs, and fewer manual follow-ups.
+          Custom software and workflow automation for property management, real estate and estate agents, and small car dealerships. Start with one everyday process that needs to work better.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -28,7 +28,7 @@ export function HeroSection() {
           </Link>
           <Link href="/services">
             <Button size="lg" variant="outline" className="border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary text-base px-8 py-6">
-              Explore Our Services
+              Explore Your Industry
             </Button>
           </Link>
         </div>
